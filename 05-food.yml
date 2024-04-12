@@ -12,7 +12,17 @@
   - name: Install httpd
     yum:
       name: httpd
-      state: present    
+      state: present
+
+  - name: start httpd
+    service:
+      name: httpd
+      state: started
+
+  - name: Enable httpd
+    service:
+      name: httpd
+      enabled: yes          
 
   - name: Host Code
     git:
