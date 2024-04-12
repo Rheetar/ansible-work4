@@ -18,24 +18,5 @@
     service:
       name: apache2
       enabled: yes  
-
-- name: Install httpd server
-  hosts: n1
-  become: yes
-
-  tasks:
-  - name: Install httpd
-    yum:
-      name: httpd
-      state: present
-
-  - name: start httpd
-    service:
-      name: httpd
-      state: started
-
-  - name: Enable httpd
-    service:
-      name: httpd
-      enabled: yes        
+          
 ...
